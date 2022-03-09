@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Creating a fullscreen flex box-->
+    <div class="flex justify-center items-center w-screen h-screen">
+        <!--Creating a div to host the OTP form-->
+        <div class="w-64 border-2 rounded-lg md:w-96">
+            <!--OTP submit form-->
+            <form class="flex flex-col px-6 pt-6 md:px-8 md:pt-8" autocomplete="off">
+                <!--Header for form-->
+                <h2 class="text-xl font-medium md:text-2xl">Add mobile number</h2>
+                <!--Div displaying submitted mobile number and change option-->
+                <div class="flex flex-row items-center text-xs my-2 md:text-sm md:my-4">
+                    <h4>+919876543210</h4>
+                    <a href="mobile.html" class="mx-2 text-sky-600 font-semibold hover:text-sky-800">Change</a>
+                </div>  
+                <!--Information text-->         
+                <h4 class="text-xs mb-1 md:text-sm md:mb-3">We've sent a One Time Password (OTP) to your phone number. Please enter it below.</h4> 
+                <!--Input header-->  
+                <h4 class="text-xs font-semibold my-1 md:text-sm">Enter OTP</h4>
+                <!--OTP input-->
+                <input type="text" id="otp" class="border-stone-400 border px-2 py-1 rounded mb-3 focus:outline-none text-sm md:text-base">
+                <!--Warning header (appears if text is entered)-->
+                <h4 class="text-xs text-red-600 font-semibold mb-2 md:text-sm" id="warning" hidden="true"></h4>
+                <!--Submit button-->
+                <button class="bg-rose-500 cursor-pointer text-white py-2 rounded-lg hover:bg-rose-600 active:bg-rose-700 text-sm md:text-base" disabled="true" id="submit">Create your Taanima account</button>
+                <!--Terms and conditons with policy hyperlinks-->
+                <div class="text-xs my-2 md:text-sm md:my-4">
+                    By creating an account or logging in, you agree to Taanima's
+                    <a href="https://google.com" class="text-sky-600 hover:text-sky-800">Conditions of Use</a>
+                    and
+                    <a href="https://google.com" class="text-sky-600 hover:text-sky-800">Privacy Policy</a>
+                </div>             
+            </form>
+            <!--Resend OTP button outside of form-->
+            <div class="flex justify-center items-center mb-6 md:mb-8">
+                <button class="text-sm text-sky-600 font-semibold hover:text-sky-800 md:text-base">Resend OTP</button>
+            </div> 
+        </div>
+    </div>
+
+
+    <script src="scripts/otp.js"></script>
+</body>
+</html>

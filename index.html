@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Creating a fullscreen flex box-->
+    <div class="flex justify-center items-center w-screen h-screen">
+        <!--Mobile number submit form-->
+        <form class="w-64 border-2 rounded-lg md:w-96" autocomplete="off" action="otp.html">
+            <!--Flex div containing all form elements-->
+            <div class="flex flex-col p-6 md:p-8">
+                <!--Header for form-->
+                <h2 class="text-xl font-medium md:text-2xl">Add mobile number</h2>
+                <!--Information text-->
+                <h4 class="my-2 text-xs md:my-4 md:text-sm">To enhance your account security, add and verify your mobile number.</h4>
+                <!--Header for input-->
+                <h4 class="text-xs font-semibold my-1 md:text-sm">New mobile phone number</h4>
+                <!--Mobile number input-->
+                <input type="text" class="border-stone-400 border text-sm px-2 py-1 rounded mb-2 focus:outline-none md:text-base" id="number" placeholder="(eg. 98765-43210)">
+                <!--Hidden warning header (appears if a 10 digit number is not entered or if text is entered)-->
+                <h4 class="text-xs text-red-600 font-semibold mb-2 md:text-sm" id="warning" hidden="true"></h4>
+                <!--Terms and Conditions-->
+                <h4 class="text-xs md:text-sm">By enrolling your mobile phone number, you consent to receiving automated security notifications via test messages from Taanima. You can opt out by removing your
+                    mobile number on the Login & Security page located in Your Account settings. Message and data rates may apply.
+                </h4>
+                <!--Submit Button-->
+                <button class="mt-4 cursor-pointer bg-rose-500 text-sm text-white py-2 rounded-lg md:mt-6 md:text-base hover:bg-rose-600 active:bg-rose-700 " id="submit" disabled="true">Add mobile number</button>
+            </div>
+        </form>
+    </div>
+    <script src="scripts/mobile.js"></script>
+</body>
+
+</html>
